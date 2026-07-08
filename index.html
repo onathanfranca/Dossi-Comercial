@@ -52,8 +52,32 @@
     p, .lead{font-size:15px;}
   }
  
-  /* topo fixo de exclusividade */
-  .top-bar{background:oklch(65% .22 25 / .15); border-bottom:1px solid oklch(65% .22 25 / .3); text-align:center; padding:12px 16px; font-size:13px; font-weight:700; color:var(--foreground);}
+  /* topo de garantia (duas linhas) */
+  .top-bar{text-align:center; padding:20px 16px 18px; border-bottom:1px solid var(--border);}
+  .top-bar-badge{display:inline-block; background:var(--accent); color:var(--accent-foreground, oklch(15% .03 250)); font-weight:800; font-size:14px; padding:9px 20px; border-radius:999px; margin-bottom:8px;}
+  .top-bar-sub{font-size:13px; color:var(--muted-foreground);}
+ 
+  /* hero com mockup */
+  .hero-grid{display:grid; grid-template-columns:1.15fr .85fr; gap:40px; align-items:center;}
+  @media (max-width:860px){ .hero-grid{grid-template-columns:1fr; text-align:center;} }
+  .hero-text .btn-wrap{align-items:center;}
+  @media (min-width:861px){ .hero-text{text-align:left;} .hero-text .btn-wrap{align-items:flex-start;} .hero-text .btn{max-width:420px;} .hero-text .btn-ghost{text-align:left;} }
+ 
+  /* mockup de celular em CSS puro */
+  .phone-wrap{display:flex; justify-content:center;}
+  .phone{width:260px; background:#0b1220; border:3px solid #1c2942; border-radius:36px; padding:14px 12px; box-shadow:0 30px 70px -20px rgba(0,0,0,.6), 0 0 0 1px oklch(78% .15 220 / .15); position:relative;}
+  .phone::before{content:''; position:absolute; top:22px; left:50%; transform:translateX(-50%); width:70px; height:18px; background:#0b1220; border-radius:10px; z-index:2;}
+  .phone-screen{background:linear-gradient(180deg, #0e1830, #0a1120); border-radius:24px; padding:34px 12px 14px; }
+  .phone-app-header{display:flex; align-items:center; gap:8px; margin-bottom:14px; padding:0 4px;}
+  .phone-app-header .folder-icon{width:26px; height:26px; flex-shrink:0;}
+  .phone-app-title{font-size:15px; font-weight:800; color:#fff; line-height:1.1;}
+  .phone-app-subtitle{font-size:8px; font-weight:700; letter-spacing:.04em; color:var(--accent); text-transform:uppercase;}
+  .phone-grid{display:grid; grid-template-columns:1fr 1fr; gap:8px;}
+  .phone-tile{background:#101c34; border:1px solid oklch(78% .15 220 / .25); border-radius:12px; padding:12px 6px; text-align:center;}
+  .phone-tile svg{width:22px; height:22px; color:var(--accent); margin-bottom:6px;}
+  .phone-tile span{display:block; font-size:9.5px; font-weight:700; color:#e8edf7;}
+  .phone-tabbar{display:flex; justify-content:space-around; margin-top:14px; padding-top:10px; border-top:1px solid oklch(100% 0 0/.08);}
+  .phone-tabbar span{font-size:7px; color:#5b6b8a; font-weight:600;}
  
   /* comparação você já tem / adicione */
   .compare-grid{display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-top:24px;}
@@ -88,19 +112,77 @@
 </head>
 <body>
  
-<div class="top-bar">🔒 Oferta exclusiva desta página — disponível só agora, logo após a sua compra do Kit do Vidraceiro.</div>
+<div class="top-bar">
+  <span class="top-bar-badge">Seu Kit do Vidraceiro já está garantido.</span>
+  <div class="top-bar-sub">Essa é uma oferta extra e opcional para complementar seu material.</div>
+</div>
  
 <!-- HERO -->
 <section>
-  <div class="container-narrow" style="text-align:center;">
-    <span class="eyebrow">Seu Kit do Vidraceiro já está garantido</span>
-    <h1>Agora não chegue pequeno quando aparecer um <span style="color:var(--accent)">orçamento grande.</span></h1>
-    <p class="lead">Leve o Dossiê Comercial do Vidraceiro e tenha em mãos projetos completos para lojas, clínicas, escritórios, fachadas, vitrines e divisórias — com propostas prontas e mensagens de WhatsApp comercial, pra você não chegar pequeno quando aparecer um cliente maior.</p>
+  <div class="container">
+    <div class="hero-grid">
+      <div class="hero-text">
+        <span class="eyebrow">Oferta única desta página</span>
+        <h1>Agora não chegue pequeno quando aparecer um <span style="color:var(--accent)">orçamento grande.</span></h1>
+        <p class="lead">Leve o Dossiê Comercial do Vidraceiro e tenha em mãos projetos completos para lojas, clínicas, escritórios, fachadas, vitrines e divisórias — com propostas prontas e mensagens de WhatsApp comercial, pra você não chegar pequeno quando aparecer um cliente maior.</p>
  
-    <div class="btn-wrap">
-      <a href="https://pay.lowify.com.br/checkout?product_id=W5MRC9" class="btn" target="_blank" rel="noopener">SIM, QUERO ADICIONAR POR R$19,90 →</a>
-      <span class="trust-line">Pagamento único • Material digital • Abre no celular • Garantia de 7 dias</span>
-      <a href="https://dossieessencial.lovable.app" class="btn-ghost">Não, obrigado. Quero ficar apenas com meu Kit do Vidraceiro.</a>
+        <div class="btn-wrap">
+          <a href="https://pay.lowify.com.br/checkout?product_id=W5MRC9" class="btn" target="_blank" rel="noopener">SIM, QUERO ADICIONAR POR R$19,90 →</a>
+          <span class="trust-line">Pagamento único • Material digital • Abre no celular • Garantia de 7 dias</span>
+          <a href="https://dossieessencial.lovable.app" class="btn-ghost">Não, obrigado. Quero ficar apenas com meu Kit do Vidraceiro.</a>
+        </div>
+      </div>
+ 
+      <div class="phone-wrap">
+        <div class="phone">
+          <div class="phone-screen">
+            <div class="phone-app-header">
+              <svg class="folder-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color:var(--accent)"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7Z"/></svg>
+              <div>
+                <div class="phone-app-title">Dossiê</div>
+                <div class="phone-app-subtitle">Comercial do Vidraceiro</div>
+              </div>
+            </div>
+            <div class="phone-grid">
+              <div class="phone-tile">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21V9l9-6 9 6v12"/><path d="M9 21v-6h6v6"/></svg>
+                <span>Lojas</span>
+              </div>
+              <div class="phone-tile">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 21V5a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v16"/><path d="M9 21v-4h6v4"/><path d="M9 8h1M14 8h1M9 12h1M14 12h1"/></svg>
+                <span>Clínicas</span>
+              </div>
+              <div class="phone-tile">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 21V3h9v18"/><path d="M15 21V9h3v12"/><path d="M9 7h2M9 11h2M9 15h2"/></svg>
+                <span>Escritórios</span>
+              </div>
+              <div class="phone-tile">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="3" width="16" height="18" rx="1"/><path d="M9 21v-5h6v5M9 8h1M14 8h1M9 12h1M14 12h1"/></svg>
+                <span>Fachadas</span>
+              </div>
+              <div class="phone-tile">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="3" width="16" height="18" rx="1"/><path d="M12 3v18"/></svg>
+                <span>Divisórias</span>
+              </div>
+              <div class="phone-tile">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="8" width="18" height="10" rx="1"/><path d="M7 8V6a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v2"/></svg>
+                <span>Vitrines</span>
+              </div>
+              <div class="phone-tile">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 3v4a1 1 0 0 0 1 1h4"/><path d="M17 21H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h7l5 5v11a2 2 0 0 1-2 2Z"/><path d="M9 15l2 2 4-4"/></svg>
+                <span>Proposta Comercial</span>
+              </div>
+              <div class="phone-tile">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5Z"/></svg>
+                <span>WhatsApp Comercial</span>
+              </div>
+            </div>
+            <div class="phone-tabbar">
+              <span>● Início</span><span>Projetos</span><span>Clientes</span><span>Mais</span>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
