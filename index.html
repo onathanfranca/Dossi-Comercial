@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dossiê Comercial do Vidraceiro — Oferta Exclusiva</title>
+<meta name="description" content="Complemente seu Kit do Vidraceiro com o Dossiê Comercial: projetos, propostas e mensagens prontas para orçamentos maiores em lojas, clínicas, escritórios e fachadas.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --radius: .875rem;
+    --background: oklch(18% .025 250);
+    --foreground: oklch(98% .005 250);
+    --card: oklch(23% .028 250);
+    --muted-foreground: oklch(75% .02 250);
+    --primary: oklch(98% .005 250);
+    --primary-foreground: oklch(18% .025 250);
+    --accent: oklch(78% .15 220);
+    --success: oklch(72% .19 150);
+    --danger: oklch(65% .22 25);
+    --border: oklch(100% 0 0/.1);
+    --gradient-bg: radial-gradient(ellipse at top, oklch(26% .05 230) 0%, oklch(16% .025 250) 60%);
+    --glass-bg: linear-gradient(180deg, oklch(100% 0 0/.06), oklch(100% 0 0/.02));
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{font-family:'Inter', system-ui, sans-serif; background:var(--gradient-bg); background-color:var(--background); background-attachment:fixed; color:var(--foreground); line-height:1.55;}
+  .container{max-width:900px; margin:0 auto; padding:0 24px;}
+  .container-narrow{max-width:720px; margin:0 auto; padding:0 24px;}
+  section{padding:56px 0;}
+  h1{font-size:clamp(26px, 5vw, 38px); font-weight:900; line-height:1.18; letter-spacing:-.01em; margin-bottom:16px;}
+  h2{font-size:clamp(22px, 4vw, 28px); font-weight:800; line-height:1.25; margin-bottom:12px;}
+  p{color:var(--muted-foreground); font-size:16px;}
+  .lead{font-size:17px; color:var(--muted-foreground); margin-bottom:24px;}
+  .eyebrow{display:inline-block; font-size:12px; font-weight:800; text-transform:uppercase; letter-spacing:.08em; color:var(--accent); background:var(--glass-bg); border:1px solid var(--border); padding:6px 14px; border-radius:999px; margin-bottom:16px;}
+  .card{background:var(--card); border:1px solid var(--border); border-radius:var(--radius); padding:28px;}
+  ul{list-style:none;}
+  li{display:flex; align-items:flex-start; gap:10px; margin-bottom:10px; font-size:15px; color:var(--foreground);}
+  li .icon{flex-shrink:0; width:18px; height:18px; border-radius:50%; background:oklch(72% .19 150 / .18); color:var(--success); display:flex; align-items:center; justify-content:center; font-size:11px; font-weight:800; margin-top:2px;}
+  .btn{display:inline-flex; align-items:center; justify-content:center; gap:10px; width:100%; max-width:460px; padding:19px 28px; background:var(--primary); color:var(--primary-foreground); font-size:17px; font-weight:800; border:none; border-radius:var(--radius); cursor:pointer; text-decoration:none; box-shadow:0 8px 34px -6px oklch(72% .19 150 / .45); transition:transform .15s ease;}
+  .btn:hover{transform:translateY(-2px);}
+  .btn-ghost{display:inline-block; margin-top:14px; font-size:14px; color:var(--muted-foreground); text-decoration:underline; text-underline-offset:3px;}
+  .btn-wrap{display:flex; flex-direction:column; align-items:center; gap:6px; margin-top:8px;}
+  .trust-line{font-size:13px; color:var(--muted-foreground); text-align:center;}
+  .section-head{text-align:center; margin-bottom:8px;}
+ 
+  /* topo fixo de exclusividade */
+  .top-bar{background:oklch(65% .22 25 / .15); border-bottom:1px solid oklch(65% .22 25 / .3); text-align:center; padding:12px 16px; font-size:13px; font-weight:700; color:var(--foreground);}
+ 
+  /* comparação você já tem / adicione */
+  .compare-grid{display:grid; grid-template-columns:1fr 1fr; gap:20px; margin-top:28px;}
+  @media (max-width:640px){ .compare-grid{grid-template-columns:1fr;} }
+  .compare-card .tag{font-size:12px; font-weight:800; letter-spacing:.06em; margin-bottom:10px; display:block;}
+  .compare-card.have{opacity:.75;}
+  .compare-card.have .tag{color:var(--muted-foreground);}
+  .compare-card.add{border-color:var(--accent); background:linear-gradient(180deg, oklch(78% .15 220 / .1), var(--card));}
+  .compare-card.add .tag{color:var(--accent);}
+  .compare-note{text-align:center; font-weight:700; font-size:15px; margin-top:20px; color:var(--foreground);}
+ 
+  /* items */
+  .feature-grid{display:grid; grid-template-columns:1fr 1fr; gap:20px; margin-top:28px;}
+  @media (max-width:640px){ .feature-grid{grid-template-columns:1fr;} }
+  .feature-card h3{font-size:17px; font-weight:800; margin-bottom:8px;}
+  .feature-card p{font-size:14px;}
+  .script-quote{font-size:14px; font-style:italic; color:var(--foreground); background:var(--glass-bg); border:1px solid var(--border); border-radius:10px; padding:12px 14px; margin-top:10px;}
+ 
+  /* observa cliente comercial */
+  .watch-list{max-width:480px; margin:24px auto 0;}
+ 
+  /* oferta */
+  .offer-card{max-width:600px; margin:28px auto 0; padding:32px; text-align:center;}
+  .price-was{font-size:14px; color:var(--muted-foreground);}
+  .price-now{font-size:52px; font-weight:900; color:var(--accent); line-height:1; margin:6px 0;}
+  .price-sub{font-size:14px; margin-bottom:20px;}
+  .offer-list{text-align:left; max-width:340px; margin:0 auto 22px;}
+  .think-box{border:1px dashed var(--border); border-radius:var(--radius); padding:16px 18px; font-size:14px; margin-bottom:24px; text-align:left;}
+  .guarantee-box{margin-top:24px; padding:18px 20px; background:var(--glass-bg); border:1px solid var(--border); border-radius:var(--radius); font-size:14px; text-align:left;}
+  .footer-tag{text-align:center; font-size:13px; color:var(--muted-foreground); padding:28px 0;}
+</style>
+</head>
+<body>
+ 
+<div class="top-bar">🔒 Oferta exclusiva desta página — disponível só agora, logo após a sua compra do Kit do Vidraceiro.</div>
+ 
+<!-- HERO -->
+<section>
+  <div class="container-narrow" style="text-align:center;">
+    <span class="eyebrow">Seu Kit do Vidraceiro já está garantido</span>
+    <h1>Agora não chegue pequeno quando aparecer um <span style="color:var(--accent)">orçamento grande.</span></h1>
+    <p class="lead">Leve o Dossiê Comercial do Vidraceiro e tenha em mãos projetos completos para lojas, clínicas, escritórios, fachadas, vitrines e divisórias — com propostas prontas e mensagens de WhatsApp comercial, pra você não chegar pequeno quando aparecer um cliente maior.</p>
+ 
+    <div class="btn-wrap">
+      <a href="https://pay.lowify.com.br/checkout?product_id=W5MRC9" class="btn" target="_blank" rel="noopener">SIM, QUERO ADICIONAR POR R$19,90 →</a>
+      <span class="trust-line">Pagamento único • Material digital • Abre no celular • Garantia de 7 dias</span>
+      <a href="https://dossieessencial.lovable.app" class="btn-ghost">Não, obrigado. Quero ficar apenas com meu Kit do Vidraceiro.</a>
+    </div>
+  </div>
+</section>
+ 
+<!-- VOCÊ JÁ TEM x ADICIONE -->
+<section>
+  <div class="container">
+    <div class="section-head">
+      <h2>Você já garantiu o Kit. Agora vem o material para oportunidades maiores.</h2>
+      <p class="lead" style="max-width:640px; margin:0 auto;">O Kit do Vidraceiro te ajuda no atendimento do dia a dia. Mas quando aparece uma loja, clínica, escritório, fachada ou vitrine, o cliente comercial não olha só preço — ele olha organização, referência, proposta e confiança. Se você chega sem material pronto, pode parecer pequeno antes mesmo de falar o valor.</p>
+    </div>
+ 
+    <div class="compare-grid">
+      <div class="card compare-card have">
+        <span class="tag">VOCÊ JÁ TEM</span>
+        <h3 style="font-size:17px; font-weight:800; margin-bottom:14px;">Kit do Vidraceiro</h3>
+        <p style="font-size:13px; margin-bottom:14px;">Para o atendimento do dia a dia.</p>
+        <ul>
+          <li><span class="icon">✓</span> Catálogo para WhatsApp</li>
+          <li><span class="icon">✓</span> Projetos prontos</li>
+          <li><span class="icon">✓</span> Checklist de medição</li>
+          <li><span class="icon">✓</span> Planilha de orçamento</li>
+          <li><span class="icon">✓</span> Scripts de atendimento</li>
+          <li><span class="icon">✓</span> Proposta simples</li>
+        </ul>
+      </div>
+      <div class="card compare-card add">
+        <span class="tag">ADICIONE AGORA</span>
+        <h3 style="font-size:17px; font-weight:800; margin-bottom:14px;">Dossiê Comercial do Vidraceiro</h3>
+        <p style="font-size:13px; margin-bottom:14px;">Para apresentar serviços maiores com mais peso.</p>
+        <ul>
+          <li><span class="icon">✓</span> Projetos comerciais</li>
+          <li><span class="icon">✓</span> Modelos para lojas e clínicas</li>
+          <li><span class="icon">✓</span> Fachadas e divisórias</li>
+          <li><span class="icon">✓</span> Proposta comercial</li>
+          <li><span class="icon">✓</span> Mensagens para empresas</li>
+          <li><span class="icon">✓</span> Argumentos de valor</li>
+        </ul>
+      </div>
+    </div>
+    <p class="compare-note">Kit = atendimento profissional do dia a dia. Dossiê Comercial = apresentação para o orçamento grande que pode aparecer amanhã.</p>
+  </div>
+</section>
+ 
+<!-- O QUE VEM DENTRO -->
+<section>
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Conteúdo</span>
+      <h2>O que você recebe no Dossiê Comercial</h2>
+    </div>
+ 
+    <div class="feature-grid">
+      <div class="card feature-card">
+        <h3>Projetos Comerciais Prontos</h3>
+        <p>Modelos para lojas, clínicas, escritórios, recepções, salões, condomínios, fachadas, divisórias, vitrines, portas de vidro, guarda-corpo e espelhos grandes — pro cliente visualizar possibilidades maiores antes de perguntar só o preço.</p>
+      </div>
+      <div class="card feature-card">
+        <h3>Combinações de Serviços Maiores</h3>
+        <p>Apresente ideias mais completas: fachada + porta de vidro, loja + vitrine, recepção + divisória, clínica + espelho grande, escritório + divisória, condomínio + guarda-corpo. Ajuda o cliente a enxergar um projeto maior, não só uma peça solta.</p>
+      </div>
+      <div class="card feature-card">
+        <h3>Modelo de Proposta Comercial</h3>
+        <p>Proposta organizada pra apresentar serviços a empresas, com campos para ambiente, medidas, materiais, prazo, condições de pagamento, validade e observações. Sem cara de improviso.</p>
+      </div>
+      <div class="card feature-card">
+        <h3>Argumentos de Valor por Serviço</h3>
+        <p>Frases e pontos prontos para explicar fachadas, divisórias, vitrines, portas comerciais, guarda-corpo, espelhos grandes, recepções, clínicas e escritórios. Cliente comercial não compra só vidro — compra aparência, segurança e confiança.</p>
+      </div>
+      <div class="card feature-card" style="grid-column:span 2;">
+        <h3>Mensagens para WhatsApp Comercial</h3>
+        <p>Scripts pra apresentar opções maiores sem parecer forçado.</p>
+        <div class="script-quote">"Além dessa opção, tenho um modelo mais completo para esse tipo de ambiente. Posso te mostrar?"</div>
+        <div class="script-quote">"Separei algumas referências comerciais que podem valorizar mais a entrada do seu espaço."</div>
+        <div class="script-quote">"Esse modelo resolve o básico. Mas se quiser uma apresentação mais profissional, tem uma opção melhor."</div>
+      </div>
+    </div>
+  </div>
+</section>
+ 
+<!-- QUEBRA / TENSÃO -->
+<section>
+  <div class="container-narrow">
+    <div class="section-head">
+      <h2>Orçamento comercial não pode parecer orçamento pequeno.</h2>
+      <p class="lead">Quando você fala com loja, clínica, escritório ou empresa, o cliente observa mais do que o preço:</p>
+    </div>
+    <ul class="watch-list">
+      <li><span class="icon">✓</span> Ele olha sua organização.</li>
+      <li><span class="icon">✓</span> Ele olha suas referências.</li>
+      <li><span class="icon">✓</span> Ele olha sua proposta.</li>
+      <li><span class="icon">✓</span> Ele olha se você parece preparado.</li>
+      <li><span class="icon">✓</span> Ele olha se você consegue explicar o serviço.</li>
+    </ul>
+    <p class="lead" style="text-align:center; margin-top:20px; font-weight:700; color:var(--foreground);">E se você não mostra valor, ele compara preço.</p>
+  </div>
+</section>
+ 
+<!-- PREPARO PRA OPORTUNIDADE -->
+<section>
+  <div class="container-narrow">
+    <div class="section-head">
+      <h2>Você não precisa viver só de orçamento pequeno.</h2>
+    </div>
+    <p class="lead" style="text-align:center;">Um cliente de box também pode ter uma loja. Um cliente de espelho também pode ter uma clínica. Um cliente de janela pode conhecer alguém que precisa de divisória. Um cliente de porta pode precisar de fachada.</p>
+    <p class="lead" style="text-align:center; font-weight:700; color:var(--foreground);">Mas pra oferecer algo maior, você precisa ter o que mostrar. Sem modelo, sem proposta e sem material comercial, você fica preso no básico.</p>
+  </div>
+</section>
+ 
+<!-- OFERTA -->
+<section>
+  <div class="container-narrow">
+    <div class="section-head">
+      <span class="eyebrow">Oferta desta página</span>
+      <h2>Adicione agora o Dossiê Comercial</h2>
+      <p class="lead">Projetos, propostas e materiais pra apresentar serviços comerciais com mais profissionalismo.</p>
+    </div>
+ 
+    <div class="card offer-card">
+      <div class="price-was">Por apenas</div>
+      <div class="price-now">R$ 19,90</div>
+      <div class="price-sub">pagamento único</div>
+ 
+      <div class="think-box">
+        <strong style="color:var(--foreground)">Pense assim:</strong> R$19,90 é muito pouco perto de um orçamento comercial que você pode perder por chegar sem apresentação, sem proposta e sem material pronto.
+      </div>
+ 
+      <ul class="offer-list">
+        <li><span class="icon">✓</span> Pagamento único</li>
+        <li><span class="icon">✓</span> Material digital</li>
+        <li><span class="icon">✓</span> Abre no celular</li>
+        <li><span class="icon">✓</span> Complemento direto do Kit</li>
+        <li><span class="icon">✓</span> Garantia de 7 dias</li>
+      </ul>
+ 
+      <div class="btn-wrap">
+        <a href="https://pay.lowify.com.br/checkout?product_id=W5MRC9" class="btn" target="_blank" rel="noopener">SIM, QUERO ADICIONAR POR R$19,90 →</a>
+        <span class="trust-line">Seu Kit principal já está garantido — essa é uma oferta extra e opcional.</span>
+        <a href="https://dossieessencial.lovable.app" class="btn-ghost">Não, obrigado. Quero seguir apenas com meu Kit.</a>
+      </div>
+ 
+      <div class="guarantee-box">
+        <strong style="color:var(--foreground)">Garantia simples de 7 dias:</strong> abra o Dossiê Comercial, veja os materiais e avalie se faz sentido pra sua rotina. Se achar que não é pra você, pode pedir reembolso dentro de 7 dias.
+      </div>
+    </div>
+  </div>
+</section>
+ 
+<!-- CTA FINAL -->
+<section style="text-align:center;">
+  <div class="container-narrow">
+    <h2>Não espere aparecer um orçamento maior <span style="color:var(--accent)">pra perceber que você não tinha nada pronto pra mostrar.</span></h2>
+    <p class="lead">Adicione agora o Dossiê Comercial e tenha material comercial pra apresentar serviços maiores com mais confiança.</p>
+    <div class="btn-wrap">
+      <a href="https://pay.lowify.com.br/checkout?product_id=W5MRC9" class="btn" target="_blank" rel="noopener">SIM, QUERO ADICIONAR POR R$19,90 →</a>
+      <a href="https://dossieessencial.lovable.app" class="btn-ghost">Não, obrigado. Quero seguir apenas com meu Kit.</a>
+    </div>
+  </div>
+</section>
+ 
+<p class="footer-tag">© Dossiê Comercial do Vidraceiro • Oferta exclusiva desta página</p>
+ 
+</body>
+</html>
+ 
+
+
