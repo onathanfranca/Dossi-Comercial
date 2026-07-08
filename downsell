@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dossiê Comercial Essencial do Vidraceiro — R$12,90</title>
+<meta name="description" content="Versão essencial do Dossiê Comercial: material digital prático para começar a apresentar orçamentos comerciais em lojas, clínicas, escritórios, fachadas e divisórias.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --radius: .875rem;
+    --background: oklch(18% .025 250);
+    --foreground: oklch(98% .005 250);
+    --card: oklch(23% .028 250);
+    --muted-foreground: oklch(75% .02 250);
+    --primary: oklch(98% .005 250);
+    --primary-foreground: oklch(18% .025 250);
+    --accent: oklch(78% .15 220);
+    --success: oklch(72% .19 150);
+    --danger: oklch(65% .22 25);
+    --border: oklch(100% 0 0/.1);
+    --gradient-bg: radial-gradient(ellipse at top, oklch(26% .05 230) 0%, oklch(16% .025 250) 60%);
+    --glass-bg: linear-gradient(180deg, oklch(100% 0 0/.06), oklch(100% 0 0/.02));
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{font-family:'Inter', system-ui, sans-serif; background:var(--gradient-bg); background-color:var(--background); background-attachment:fixed; color:var(--foreground); line-height:1.6; -webkit-text-size-adjust:100%;}
+  .container{max-width:900px; margin:0 auto; padding:0 20px;}
+  .container-narrow{max-width:680px; margin:0 auto; padding:0 20px;}
+  section{padding:44px 0;}
+  h1{font-size:clamp(23px, 6vw, 34px); font-weight:900; line-height:1.28; letter-spacing:-.01em; margin-bottom:14px;}
+  h2{font-size:clamp(19px, 4.5vw, 25px); font-weight:800; line-height:1.32; margin-bottom:12px;}
+  p{color:var(--muted-foreground); font-size:15.5px;}
+  .lead{font-size:16px; color:var(--muted-foreground); margin-bottom:20px; line-height:1.65;}
+  .eyebrow{display:inline-block; font-size:11.5px; font-weight:800; text-transform:uppercase; letter-spacing:.06em; color:var(--accent); background:var(--glass-bg); border:1px solid var(--border); padding:6px 14px; border-radius:999px; margin-bottom:14px;}
+  .card{background:var(--card); border:1px solid var(--border); border-radius:var(--radius); padding:22px;}
+  ul{list-style:none;}
+  li{display:flex; align-items:flex-start; gap:10px; margin-bottom:11px; font-size:15px; line-height:1.5; color:var(--foreground);}
+  li .icon{flex-shrink:0; width:18px; height:18px; border-radius:50%; background:oklch(72% .19 150 / .18); color:var(--success); display:flex; align-items:center; justify-content:center; font-size:11px; font-weight:800; margin-top:2px;}
+  .btn{display:inline-flex; align-items:center; justify-content:center; gap:8px; width:100%; max-width:440px; padding:18px 22px; background:var(--primary); color:var(--primary-foreground); font-size:15.5px; font-weight:800; border:none; border-radius:var(--radius); cursor:pointer; text-decoration:none; text-align:center; box-shadow:0 8px 34px -6px oklch(72% .19 150 / .45); transition:transform .15s ease; line-height:1.3;}
+  .btn:hover{transform:translateY(-2px);}
+  .btn-ghost{display:inline-block; margin-top:14px; font-size:13.5px; color:var(--muted-foreground); text-decoration:underline; text-underline-offset:3px; text-align:center;}
+  .btn-wrap{display:flex; flex-direction:column; align-items:center; gap:8px; margin-top:8px;}
+  .trust-line{font-size:12.5px; color:var(--muted-foreground); text-align:center; line-height:1.5;}
+  .section-head{text-align:center; margin-bottom:6px;}
+  .footer-tag{text-align:center; font-size:13px; color:var(--muted-foreground); padding:26px 0;}
+
+  @media (max-width:480px){
+    section{padding:36px 0;}
+    .container, .container-narrow{padding:0 18px;}
+    p, .lead{font-size:15px;}
+  }
+
+  /* topo: recuo educado antes da oferta menor */
+  .top-note{text-align:center; padding:20px 16px 0;}
+  .top-note p{font-size:14.5px; max-width:480px; margin:0 auto 4px;}
+  .top-note .strike-line{color:var(--muted-foreground); font-size:13.5px;}
+
+  /* selo essencial */
+  .essential-tag{display:inline-block; font-size:11.5px; font-weight:800; letter-spacing:.06em; text-transform:uppercase; color:var(--success); background:oklch(72% .19 150 / .12); border:1px solid oklch(72% .19 150 / .3); padding:5px 12px; border-radius:999px; margin-bottom:14px;}
+
+  /* comparação completo x essencial */
+  .compare-grid{display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-top:22px;}
+  @media (max-width:700px){ .compare-grid{grid-template-columns:1fr; gap:14px;} }
+  .compare-card .tag{font-size:12px; font-weight:800; letter-spacing:.06em; margin-bottom:10px; display:block;}
+  .compare-card.full{opacity:.7;}
+  .compare-card.full .tag{color:var(--muted-foreground);}
+  .compare-card.essential{border-color:var(--success); background:linear-gradient(180deg, oklch(72% .19 150 / .1), var(--card));}
+  .compare-card.essential .tag{color:var(--success);}
+  .compare-note{text-align:center; font-weight:700; font-size:15px; margin-top:18px; color:var(--foreground);}
+
+  /* features */
+  .feature-grid{display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-top:22px;}
+  @media (max-width:700px){ .feature-grid{grid-template-columns:1fr;} .feature-card[style*="grid-column"]{grid-column:auto !important;} }
+  .feature-card h3{font-size:16px; font-weight:800; margin-bottom:7px; line-height:1.35;}
+  .feature-card p{font-size:14px; line-height:1.55;}
+
+  /* imagem */
+  .facade-img{margin-top:8px; border-radius:var(--radius); overflow:hidden; border:1px solid var(--border);}
+  .facade-img img{width:100%; display:block;}
+
+  /* oferta */
+  .offer-card{max-width:560px; margin:20px auto 0; padding:24px 20px; text-align:center;}
+  .price-was{font-size:13.5px; color:var(--muted-foreground);}
+  .price-now{font-size:44px; font-weight:900; color:var(--success); line-height:1.1; margin:6px 0;}
+  .price-sub{font-size:13.5px; margin-bottom:16px;}
+  .offer-list{text-align:left; max-width:320px; margin:0 auto 18px;}
+  .guarantee-box{margin-top:20px; padding:16px 18px; background:var(--glass-bg); border:1px solid var(--border); border-radius:var(--radius); font-size:13.5px; line-height:1.55; text-align:left;}
+</style>
+</head>
+<body>
+
+<!-- RECUO EDUCADO -->
+<div class="top-note">
+  <p>Tudo bem, você não precisa pegar o Dossiê completo agora.</p>
+  <p class="strike-line">Mas você ainda pode começar com uma versão essencial por um valor menor.</p>
+</div>
+
+<!-- HERO -->
+<section>
+  <div class="container-narrow" style="text-align:center;">
+    <span class="essential-tag">Versão essencial • material digital</span>
+    <h1>Quer começar com a versão essencial por apenas <span style="color:var(--success)">R$12,90?</span></h1>
+    <p class="lead">Leve uma seleção mais simples do Dossiê Comercial do Vidraceiro para começar a apresentar serviços comerciais em lojas, clínicas, escritórios, fachadas e divisórias — sem precisar pegar o material completo agora.</p>
+
+    <div class="btn-wrap">
+      <a href="https://pay.lowify.com.br/go.php?offer=le3jh9b" class="btn" target="_blank" rel="noopener">SIM, QUERO A VERSÃO ESSENCIAL POR R$12,90 →</a>
+      <span class="trust-line">Pagamento único • Material digital • Abre no celular • Garantia de 7 dias</span>
+      <a href="https://gmail.com" class="btn-ghost">Recusar esta oferta</a>
+    </div>
+  </div>
+</section>
+
+<!-- NÃO É O COMPLETO -->
+<section>
+  <div class="container-narrow">
+    <div class="section-head">
+      <h2>Não é o Dossiê completo. É o essencial para começar.</h2>
+    </div>
+    <p class="lead">Você recusou o Dossiê Comercial completo, sem problema. Mas antes de seguir apenas com o Kit, quero te liberar uma opção mais simples.</p>
+    <p class="lead">O Kit do Vidraceiro já vai te ajudar no atendimento do dia a dia. Mas se aparecer uma oportunidade comercial — uma loja, clínica, escritório, fachada, vitrine ou divisória — você ainda precisa ter algum material pra mostrar.</p>
+    <p class="lead" style="font-weight:700; color:var(--foreground);">Por isso, em vez de pegar o Dossiê completo agora, você pode começar com o Dossiê Comercial Essencial do Vidraceiro — uma versão mais enxuta, com os materiais principais pra você não chegar vazio quando aparecer um orçamento comercial.</p>
+  </div>
+</section>
+
+<!-- O QUE VEM INCLUSO -->
+<section>
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Conteúdo</span>
+      <h2>O que vem incluso</h2>
+    </div>
+
+    <div class="feature-grid">
+      <div class="card feature-card">
+        <h3>7 Projetos Comerciais Essenciais</h3>
+        <p>Modelos para loja, clínica, escritório, fachada, divisória, vitrine e espelho grande.</p>
+      </div>
+      <div class="card feature-card">
+        <h3>Modelo de Proposta Comercial Simples</h3>
+        <p>Para enviar orçamento pra empresa com mais organização e aparência profissional.</p>
+      </div>
+      <div class="card feature-card">
+        <h3>10 Mensagens para WhatsApp Comercial</h3>
+        <p>Scripts pra apresentar opções maiores, responder cliente que pede só preço e mostrar valor antes do orçamento.</p>
+      </div>
+      <div class="card feature-card">
+        <h3>Checklist Rápido para Orçamento Comercial</h3>
+        <p>Pra conferir os pontos principais antes de enviar a proposta.</p>
+      </div>
+      <div class="card feature-card" style="grid-column:span 2;">
+        <h3>Mini Guia de Apresentação Comercial</h3>
+        <p>Um passo a passo simples pra mostrar o projeto antes de falar preço.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COMPARAÇÃO -->
+<section>
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Comparação</span>
+      <h2>Completo x Essencial</h2>
+    </div>
+
+    <div class="compare-grid">
+      <div class="card compare-card full">
+        <span class="tag">DOSSIÊ COMERCIAL COMPLETO</span>
+        <ul>
+          <li><span class="icon">✓</span> Mais projetos</li>
+          <li><span class="icon">✓</span> Mais combinações</li>
+          <li><span class="icon">✓</span> Mais propostas</li>
+          <li><span class="icon">✓</span> Mais argumentos</li>
+          <li><span class="icon">✓</span> Mais mensagens</li>
+          <li><span class="icon">✓</span> Material mais completo</li>
+        </ul>
+      </div>
+      <div class="card compare-card essential">
+        <span class="tag">DOSSIÊ COMERCIAL ESSENCIAL</span>
+        <ul>
+          <li><span class="icon">✓</span> Seleção menor</li>
+          <li><span class="icon">✓</span> Mais simples</li>
+          <li><span class="icon">✓</span> Mais rápido de usar</li>
+          <li><span class="icon">✓</span> Valor mais baixo</li>
+          <li><span class="icon">✓</span> Ideal para começar agora</li>
+        </ul>
+      </div>
+    </div>
+    <p class="compare-note">Se você não quer pegar o completo agora, comece pelo essencial.</p>
+
+    <div class="facade-img">
+      <img src="https://dossieessencial.lovable.app/assets/glass-facade-DSQ14GN8.jpg" alt="Fachadas de vidro de lojas e clínicas iluminadas à noite">
+    </div>
+  </div>
+</section>
+
+<!-- TENSÃO DE PREÇO -->
+<section>
+  <div class="container-narrow" style="text-align:center;">
+    <h2>R$12,90 é muito pouco para sair sem nenhum material comercial.</h2>
+    <p class="lead">Se aparecer uma loja, clínica, escritório ou fachada pra orçar, é melhor ter pelo menos uma base pronta pra mostrar do que chegar só com conversa e preço seco.</p>
+  </div>
+</section>
+
+<!-- OFERTA -->
+<section>
+  <div class="container-narrow">
+    <div class="section-head">
+      <span class="eyebrow">Oferta desta página</span>
+      <h2>Adicione agora o Dossiê Comercial Essencial do Vidraceiro</h2>
+    </div>
+
+    <div class="card offer-card">
+      <div class="price-was">Por apenas</div>
+      <div class="price-now">R$ 12,90</div>
+      <div class="price-sub">pagamento único</div>
+
+      <ul class="offer-list">
+        <li><span class="icon">✓</span> Pagamento único</li>
+        <li><span class="icon">✓</span> Material digital</li>
+        <li><span class="icon">✓</span> Abre no celular</li>
+        <li><span class="icon">✓</span> Complemento direto do Kit</li>
+        <li><span class="icon">✓</span> Garantia de 7 dias</li>
+      </ul>
+
+      <div class="btn-wrap">
+        <a href="https://pay.lowify.com.br/go.php?offer=le3jh9b" class="btn" target="_blank" rel="noopener">SIM, QUERO A VERSÃO ESSENCIAL POR R$12,90 →</a>
+        <span class="trust-line">Seu Kit principal já está garantido — essa é uma oferta menor e opcional pra quem prefere começar pelo essencial.</span>
+        <a href="https://gmail.com" class="btn-ghost">Recusar esta oferta</a>
+      </div>
+
+      <div class="guarantee-box">
+        <strong style="color:var(--foreground)">Garantia simples de 7 dias:</strong> abra o material, veja se faz sentido pra sua rotina e peça reembolso dentro de 7 dias se não gostar.
+      </div>
+    </div>
+  </div>
+</section>
+
+<p class="footer-tag">© Dossiê Comercial Essencial do Vidraceiro • Oferta exclusiva desta página</p>
+
+</body>
+</html>
