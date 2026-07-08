@@ -26,32 +26,38 @@
   }
   *{box-sizing:border-box; margin:0; padding:0;}
   html{scroll-behavior:smooth;}
-  body{font-family:'Inter', system-ui, sans-serif; background:var(--gradient-bg); background-color:var(--background); background-attachment:fixed; color:var(--foreground); line-height:1.55;}
-  .container{max-width:900px; margin:0 auto; padding:0 24px;}
-  .container-narrow{max-width:720px; margin:0 auto; padding:0 24px;}
-  section{padding:56px 0;}
-  h1{font-size:clamp(26px, 5vw, 38px); font-weight:900; line-height:1.18; letter-spacing:-.01em; margin-bottom:16px;}
-  h2{font-size:clamp(22px, 4vw, 28px); font-weight:800; line-height:1.25; margin-bottom:12px;}
-  p{color:var(--muted-foreground); font-size:16px;}
-  .lead{font-size:17px; color:var(--muted-foreground); margin-bottom:24px;}
-  .eyebrow{display:inline-block; font-size:12px; font-weight:800; text-transform:uppercase; letter-spacing:.08em; color:var(--accent); background:var(--glass-bg); border:1px solid var(--border); padding:6px 14px; border-radius:999px; margin-bottom:16px;}
-  .card{background:var(--card); border:1px solid var(--border); border-radius:var(--radius); padding:28px;}
+  body{font-family:'Inter', system-ui, sans-serif; background:var(--gradient-bg); background-color:var(--background); background-attachment:fixed; color:var(--foreground); line-height:1.6; -webkit-text-size-adjust:100%;}
+  .container{max-width:900px; margin:0 auto; padding:0 20px;}
+  .container-narrow{max-width:720px; margin:0 auto; padding:0 20px;}
+  section{padding:48px 0;}
+  h1{font-size:clamp(24px, 6vw, 38px); font-weight:900; line-height:1.25; letter-spacing:-.01em; margin-bottom:16px;}
+  h2{font-size:clamp(20px, 5vw, 28px); font-weight:800; line-height:1.3; margin-bottom:14px;}
+  p{color:var(--muted-foreground); font-size:15.5px;}
+  .lead{font-size:16.5px; color:var(--muted-foreground); margin-bottom:22px; line-height:1.65;}
+  .eyebrow{display:inline-block; font-size:11.5px; font-weight:800; text-transform:uppercase; letter-spacing:.06em; color:var(--accent); background:var(--glass-bg); border:1px solid var(--border); padding:6px 14px; border-radius:999px; margin-bottom:16px;}
+  .card{background:var(--card); border:1px solid var(--border); border-radius:var(--radius); padding:22px;}
   ul{list-style:none;}
-  li{display:flex; align-items:flex-start; gap:10px; margin-bottom:10px; font-size:15px; color:var(--foreground);}
+  li{display:flex; align-items:flex-start; gap:10px; margin-bottom:12px; font-size:15px; line-height:1.5; color:var(--foreground);}
   li .icon{flex-shrink:0; width:18px; height:18px; border-radius:50%; background:oklch(72% .19 150 / .18); color:var(--success); display:flex; align-items:center; justify-content:center; font-size:11px; font-weight:800; margin-top:2px;}
-  .btn{display:inline-flex; align-items:center; justify-content:center; gap:10px; width:100%; max-width:460px; padding:19px 28px; background:var(--primary); color:var(--primary-foreground); font-size:17px; font-weight:800; border:none; border-radius:var(--radius); cursor:pointer; text-decoration:none; box-shadow:0 8px 34px -6px oklch(72% .19 150 / .45); transition:transform .15s ease;}
+  .btn{display:inline-flex; align-items:center; justify-content:center; gap:8px; width:100%; max-width:460px; padding:18px 22px; background:var(--primary); color:var(--primary-foreground); font-size:15.5px; font-weight:800; border:none; border-radius:var(--radius); cursor:pointer; text-decoration:none; text-align:center; box-shadow:0 8px 34px -6px oklch(72% .19 150 / .45); transition:transform .15s ease; line-height:1.3;}
   .btn:hover{transform:translateY(-2px);}
-  .btn-ghost{display:inline-block; margin-top:14px; font-size:14px; color:var(--muted-foreground); text-decoration:underline; text-underline-offset:3px;}
-  .btn-wrap{display:flex; flex-direction:column; align-items:center; gap:6px; margin-top:8px;}
-  .trust-line{font-size:13px; color:var(--muted-foreground); text-align:center;}
+  .btn-ghost{display:inline-block; margin-top:14px; font-size:13.5px; color:var(--muted-foreground); text-decoration:underline; text-underline-offset:3px; text-align:center;}
+  .btn-wrap{display:flex; flex-direction:column; align-items:center; gap:8px; margin-top:8px;}
+  .trust-line{font-size:12.5px; color:var(--muted-foreground); text-align:center; line-height:1.5;}
   .section-head{text-align:center; margin-bottom:8px;}
+ 
+  @media (max-width:480px){
+    section{padding:40px 0;}
+    .container, .container-narrow{padding:0 18px;}
+    p, .lead{font-size:15px;}
+  }
  
   /* topo fixo de exclusividade */
   .top-bar{background:oklch(65% .22 25 / .15); border-bottom:1px solid oklch(65% .22 25 / .3); text-align:center; padding:12px 16px; font-size:13px; font-weight:700; color:var(--foreground);}
  
   /* comparação você já tem / adicione */
-  .compare-grid{display:grid; grid-template-columns:1fr 1fr; gap:20px; margin-top:28px;}
-  @media (max-width:640px){ .compare-grid{grid-template-columns:1fr;} }
+  .compare-grid{display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-top:24px;}
+  @media (max-width:700px){ .compare-grid{grid-template-columns:1fr; gap:14px;} }
   .compare-card .tag{font-size:12px; font-weight:800; letter-spacing:.06em; margin-bottom:10px; display:block;}
   .compare-card.have{opacity:.75;}
   .compare-card.have .tag{color:var(--muted-foreground);}
@@ -60,23 +66,23 @@
   .compare-note{text-align:center; font-weight:700; font-size:15px; margin-top:20px; color:var(--foreground);}
  
   /* items */
-  .feature-grid{display:grid; grid-template-columns:1fr 1fr; gap:20px; margin-top:28px;}
-  @media (max-width:640px){ .feature-grid{grid-template-columns:1fr;} }
-  .feature-card h3{font-size:17px; font-weight:800; margin-bottom:8px;}
-  .feature-card p{font-size:14px;}
-  .script-quote{font-size:14px; font-style:italic; color:var(--foreground); background:var(--glass-bg); border:1px solid var(--border); border-radius:10px; padding:12px 14px; margin-top:10px;}
+  .feature-grid{display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-top:24px;}
+  @media (max-width:700px){ .feature-grid{grid-template-columns:1fr; gap:14px;} .feature-card[style*="grid-column"]{grid-column:auto !important;} }
+  .feature-card h3{font-size:16.5px; font-weight:800; margin-bottom:8px; line-height:1.35;}
+  .feature-card p{font-size:14px; line-height:1.55;}
+  .script-quote{font-size:13.5px; line-height:1.55; font-style:italic; color:var(--foreground); background:var(--glass-bg); border:1px solid var(--border); border-radius:10px; padding:12px 14px; margin-top:10px;}
  
   /* observa cliente comercial */
   .watch-list{max-width:480px; margin:24px auto 0;}
  
   /* oferta */
-  .offer-card{max-width:600px; margin:28px auto 0; padding:32px; text-align:center;}
-  .price-was{font-size:14px; color:var(--muted-foreground);}
-  .price-now{font-size:52px; font-weight:900; color:var(--accent); line-height:1; margin:6px 0;}
-  .price-sub{font-size:14px; margin-bottom:20px;}
-  .offer-list{text-align:left; max-width:340px; margin:0 auto 22px;}
-  .think-box{border:1px dashed var(--border); border-radius:var(--radius); padding:16px 18px; font-size:14px; margin-bottom:24px; text-align:left;}
-  .guarantee-box{margin-top:24px; padding:18px 20px; background:var(--glass-bg); border:1px solid var(--border); border-radius:var(--radius); font-size:14px; text-align:left;}
+  .offer-card{max-width:600px; margin:24px auto 0; padding:24px 20px; text-align:center;}
+  .price-was{font-size:13.5px; color:var(--muted-foreground);}
+  .price-now{font-size:46px; font-weight:900; color:var(--accent); line-height:1.1; margin:6px 0;}
+  .price-sub{font-size:13.5px; margin-bottom:18px;}
+  .offer-list{text-align:left; max-width:340px; margin:0 auto 20px;}
+  .think-box{border:1px dashed var(--border); border-radius:var(--radius); padding:14px 16px; font-size:13.5px; line-height:1.55; margin-bottom:22px; text-align:left;}
+  .guarantee-box{margin-top:22px; padding:16px 18px; background:var(--glass-bg); border:1px solid var(--border); border-radius:var(--radius); font-size:13.5px; line-height:1.55; text-align:left;}
   .footer-tag{text-align:center; font-size:13px; color:var(--muted-foreground); padding:28px 0;}
 </style>
 </head>
@@ -260,5 +266,3 @@
 </body>
 </html>
  
-
-
